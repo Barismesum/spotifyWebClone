@@ -1,41 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Icon } from "Icons";
+import SongItem from './SongItem';
+import Title from "./Title";
 
 function Section({ title, more = false, items }) {
   return (
     <section>
-      <header className="flex items-center justify-between mb-4">
-        <h3 className="text-semibold text-2xl text-white tracking-tight hover:underline">
-          {title}
-        </h3>
-        {more && (
-          <NavLink
-            className={
-              "text-xs hover:underline font-semibold uppercase text-link "
-            }
-            to={more}
-          >
-            SEE ALL
-          </NavLink>
-        )}
-      </header>
+     <Title title={title} more={more} />
       <div className="grid grid-cols-5 gap-x-6">
-        {items.map((item) => (
-          <NavLink key={item.id} to="/" className={"bg-footer p-4 rounded hover:bg-active group"}>
-          <div className="pt-[100%] relative">
-           <img src={item.image} className="absolute inset-0 w-full h-full object-cover" />
-           <button className="w-10 h-10 rounded-full bg-primary absolute group-hover:flex group-focus:flex bottom-2 right-2  items-center justify-center hidden">
-            <Icon name="play"/>
-           </button>
-           </div>
-           <h6 className="overflow-hidden overflow-ellipsis whitespace-nowrap text-base font-semibold">
-           {item.title}</h6>
-           <p className="line-clamp-2 text-link text-sm mt-1">  
-              {item.description}
-           </p>
-          </NavLink>
-        ))}
+        {items.map((item) => 
+          <SongItem item={item} key={item.id}/>
+        )}
       </div>
     </section>
   );
