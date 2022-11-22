@@ -2,7 +2,7 @@ import React from 'react'
 
 function Collection() {
   return (
-    <div>kitaplık sayfası</div>
+    <div>On Progress</div>
   )
 }
 
