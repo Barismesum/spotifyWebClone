@@ -7,4 +7,4 @@ React + Redux + Tailwind
 
 ## Demo
 
-[https://spotifyclone-barismeum.netlify.app/](https://spotifyclone-barismeum.netlify.app/)
+[https://spotifyclone-barismesum.netlify.app/](https://spotifyclone-barismesum.netlify.app/)
